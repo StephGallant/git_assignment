@@ -1,0 +1,273 @@
+https://github.com/StephGallant/git_assignment
+
+    1  cat << EOF > hellofunc.c
+    2  hellofunc.c:
+    3  #include <stdio.h>
+    4  #include <hellomake.h>
+    5  void myPrintHelloMake(void) {
+    6    printf("Hello makefiles!\n");
+    7    return;
+    8  }
+    9  cat << EOF > hellomake.c
+   10  #include <hellomake.h>
+   11  int main() {
+   12    // call a function in another file
+   13    myPrintHelloMake();
+   14    return(0);
+   15  q
+   16  quit
+   17  cat << EOF > hellofunc.c
+   18  hellofunc.c:
+   19  #include <stdio.h>
+   20  #include <hellomake.h>
+   21  void myPrintHelloMake(void) {
+   22    printf("Hello makefiles!\n");
+   23    return;
+   24  } EOF
+   25  EOF
+   26  cat << EOF > hellomake.c
+   27  #include <hellomake.h>
+   28  int main() {
+   29    // call a function in another file
+   30    myPrintHelloMake();
+   31    return(0);
+   32  }
+   33  EOF
+   34  cat << EOF > hellomake.h
+   35  /*
+   36  example include file
+   37  */
+   38  void myPrintHelloMake(void);
+   39  EOF
+   40  ./hellomake.c
+   41  ./hellomake
+   42  ls
+   43  ./hellofunc.c
+   44  gcc -o hellomake hellomake.c hellofunc.c -I.
+   45  cat << EOF > hellofunc.c
+   46  #include <stdio.h>
+   47  #include <hellomake.h>
+   48  void myPrintHelloMake(void) {
+   49    printf("Hello makefiles!\n");
+   50    return;
+   51  }
+   52  EOF
+   53  cat hellofunc.c
+   54  cat << EOF > hellomake.c
+   55  #include <hellomake.h>
+   56  int main() {
+   57    // call a function in another file
+   58    myPrintHelloMake();
+   59    return(0);
+   60  }
+   61  EOF
+   62  cat << EOF > hellomake.c
+   63  #include <hellomake.h>
+   64  int main() {
+   65    // call a function in another file
+   66    myPrintHelloMake();
+   67    return(0);
+   68  }
+   69  EOF
+   70  gcc -o hellomake hellomake.c hellofunc.c -I.
+   71  nano 
+   72  make -f Makefile1
+   73  nano makefile.sh
+   74  nano Makefile1.sh
+   75  make -f Makefile1.sh
+   76  nano Makefile1.sh
+   77  make -f Makefile1
+   78  nano Makefile2
+   79  nano Makefile3
+   80  nano Makefile4
+   81  make -f Makefile4
+   82  make -f Makefile3
+   83  nano Makefile4
+   84  clear
+   85  git
+   86  git help
+   87  CC=gcc
+   88  CFLAGS=-I.
+   89  DEPS = hellomake.h
+   90  OBJ= hellomake.o hellofunc.o
+   91  hellomake: $(OBJ) 
+   92  %.o: %.c $(DEPS)
+   93  clear
+   94  git
+   95  git config --global user.name "Stephanie Gallant"
+   96  git config --global user.email "smg561@mun.ca"
+   97  git config --global core.editor "nano"
+   98  git config --list
+   99  git config --global alias.slog  "log --pretty=format:'%h - %an, %ar : %s'
+  100  git config --global alias.slog  "log --pretty=format:'%h - %an, %ar : %s' "
+  101  git init
+  102  ls
+  103  mkdir planets
+  104  rmdir planets
+  105  mkdir git_planets
+  106  cd git_planets/
+  107  ls
+  108  -A
+  109  git init
+  110  cd .
+  111  cd 
+  112  git clone https://github.com/CMSC6950/Team2rep.git
+  113  cd Team2rep
+  114  ls
+  115  nano steph.txt
+  116  git pull origin master
+  117  git add steph.txt 
+  118  git commit -m "Here is my new file"
+  119  git push origin master
+  120  ls
+  121  ls
+  122  cd Team2rep/
+  123  ls
+  124  nano README.md 
+  125  cd Team2rep/
+  126  ls
+  127  cd Team2rep/
+  128  ls
+  129  git pull 
+  130  ls
+  131  git remote
+  132  git remote -v
+  133  getdata.sh 8403500
+  134  ./getdata.sh 8403500
+  135  chmod +x getdata.sh
+  136  ./getdata.sh 8403500
+  137  ls
+  138  git pull
+  139  ls
+  140  cat head -n 10 Download.py 
+  141  git config --global user.name "StephanieGallant"
+  142  git config --global user.name
+  143  git config --global user.email "smg561@mun.ca"
+  144  git config --global user.email
+  145  git config --global user.name 
+  146  git config --global user.email 
+  147  pwd
+  148  ls
+  149  nano hellomake.h
+  150  nano Makefile1.sh
+  151  clear
+  152  pwd
+  153  git init 
+  154  ls
+  155  git pull
+  156  mkdir cmsc_git_assignment
+  157  cd cmsc_git_assignment/
+  158  git init
+  159  nano README.md
+  160  git commit -m "Add first paragraph"
+  161  nano README.md 
+  162  git commit -m "Add second paragraph"
+  163  The basic Git workflow consists of the following steps:
+  164  1. Create or edit files.
+  165  2. Add the new or changed files to the staging area.
+  166  3. Store your changes in the git database, by making a commit.
+  167  4. Choose an informative commit message. This helps at a later time to find
+  168  specific commits and to understand the intention of the changes.
+  169  5. Continue at step 1.
+  170  clear
+  171  pwd
+  172  cd cmsc_git_assignment/
+  173  ls
+  174  git checkout -b my_branch
+  175  nano README.md 
+  176  git commit -m "Add third paragraph"
+  177  git status
+  178  pwd
+  179  git status
+  180  git branch -d my_branch
+  181  git push origin --delete my_branch
+  182  pwd
+  183  ls
+  184  git rm README.md 
+  185  nano README.md 
+  186  git add README.md
+  187  git status
+  188  git commit -m "Add first paragraph"
+  189  git status
+  190  nano README.md 
+  191  git add README.md 
+  192  git commit -m "Add second paragraph"
+  193  git status
+  194  git checkout -b my_branch
+  195  git branch my_branch 
+  196  git checkout my_branch 
+  197  cd .
+  198  pwd
+  199  cd .
+  200  pwd
+  201  cd smg561/
+  202  cd home/smg561/
+  203  cd ~
+  204  rmdir cmsc_git_assignment/
+  205  cd cmsc_git_assignment/
+  206  ls
+  207  rm README.md 
+  208  cd ~
+  209  rmdir cmsc_git_assignment/
+  210  ls
+  211  cd cmsc_git_assignment/
+  212  ls
+  213  cd ~
+  214  rmdir cmsc_git_assignment/
+  215  cd cmsc_git_assignment/
+  216  git push -d origin my_branch 
+  217  git push --delete  origin my_branch 
+  218  git push --delete cmsc_git_assignment  my_branch 
+  219  git push --delete my_branch 
+  220  git push --delete master  my_branch 
+  221  git branch -D my_branch 
+  222  git branch -d my_branch 
+  223  git checkout master
+  224  git checkout cmsc_git_assignment
+  225  git branch -D my_branch 
+  226  cd ~
+  227  git mv cmsc_git_assignment/ cmsc_git_assignment_old/
+  228  git mv cmsc_git_assignment/ cmsc_git_assignment_old && git mv cmsc_git_assignment_old cmsc_git_assignment/
+  229  rmdir cmsc_git_assignment/
+  230  cd cmsc_git_assignment/
+  231  ls
+  232  clear
+  233  cd ~
+  234  rm -rf cmsc_git_assignment/
+  235  ls
+  236  mkdir cmsc_git_assignment
+  237  cd
+  238  cd cmsc_git_assignment/
+  239  git init
+  240  nano README.md
+  241  git add
+  242  git add README.md 
+  243  git commit -m "Add first paragraph"
+  244  git status
+  245  nano README.md 
+  246  git add README.md 
+  247  git commit -m "Add second paragraph"
+  248  git checkout -b my_branch
+  249  nano README.md 
+  250  git add README.md 
+  251  git commit -m "Add third paragraph"
+  252  nano README.md 
+  253  git add README.md 
+  254  git commit -m "Expanded Git workflow"
+  255  git checkout master
+  256  nano README.md 
+  257  git add README.md 
+  258  git commit -m "Wording: database/repository"
+  259  git merge my_branch 
+  260  git log --oneline --graph --all
+  261  nano README.md 
+  262  git add README.md 
+  263  git commit -m "Removed merge conflicts"
+  264  git status
+  265  nano README.md 
+  266  clear
+  267  nano README.md 
+  268  git remote add origin https://github.com/StephGallant/git_assignment.git
+  269  git push -u origin master
+  270  git push origin --all
+  271  history > history.txt
